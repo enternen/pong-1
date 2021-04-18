@@ -28,5 +28,13 @@ class Player(GameSprite):
 
 window = display.set_mode((600,500))
 window.fill((200,255,255))
-while True:
+
+game = True
+clock = time.Clock()
+
+while game:
+    for e in event.get():
+        if e.type == QUIT:
+            game = False
     display.update()
+    clock.tick(60)
