@@ -32,6 +32,17 @@ window.fill((200,255,255))
 game = True
 clock = time.Clock()
 
+speed_x = 3
+speed_y = 3
+# создаем спрайты для игры
+# racket1 = Player("",30,200,4,50,150)
+# racket2 = Player("",520,200,4,50,150)
+# ball = Player("",200,200,4,50,50)
+# создаем надписи
+font.init()
+font = font.Font(None,35)
+lose1 = font.render("PLAYER 1 LOSE!",True,(180,0,0))
+lose2 = font.render("PLAYER 2 LOSE!",True,(180,0,0))
 while game:
     for e in event.get():
         if e.type == QUIT:
