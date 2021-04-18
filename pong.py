@@ -47,5 +47,13 @@ while game:
     for e in event.get():
         if e.type == QUIT:
             game = False
+
+    if game == True:
+        window.fill((200,255,255))
+        racket1.update_l()
+        racket2.update_r()
+        ball.rect.x += speed_x
+        ball.rect.y += speed_y 
+
     display.update()
     clock.tick(60)
